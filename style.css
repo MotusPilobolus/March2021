@@ -128,15 +128,14 @@ a {
   padding-top: 20px;
 }
 .grid {
-  margin: 0 25px 25px 25px;
-  padding: 0 25px 25px 25px;
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(3, 25%);
-  grid-template-rows: repeat(2, 25%);
+  grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: repeat(2, 1fr;);
+  height: 50vh;
 }
-.project-tile {
-  margin: 1%;
+.project-tile { 
+  margin: 2vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -146,12 +145,45 @@ a {
 .project-tile:hover {
   background-color: var(--hover-grid);
 }
-/* extra wide monitors */
-@media only screen and (min-device-width: 1025px) {
-  html, body, main {
-    width: 1024px;
-  }
 
+#Salesforce-Trailhead {
+  grid-column: 4 / span 5;
+  grid-row: 1; 
+}
+
+#Front-End-Web-Development {
+  grid-column: 10 / span 5;
+  grid-row: 1; 
+}
+
+#Databases {
+  grid-column: 16 / span 5;
+  grid-row: 1; 
+}
+
+#graphic-design {
+  grid-column: 4 / span 5;
+  grid-row: 2; 
+}
+
+#Project-Management {
+  grid-column: 10 / span 5;
+  grid-row: 2; 
+}
+
+#Swift {
+  grid-column: 16 / span 5;
+  grid-row: 2; 
+}
+
+.footer, .footer p {
+  text-align: center;
+  color: #fff;
+  height: 10vh;
+  max-height: 200px;
+  background: #000;
+
+}
 
 /* tablet landscape & portrait */
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
