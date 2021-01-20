@@ -106,7 +106,8 @@ a {
   grid-row: 1 / span 3; 
   overflow: hidden;
 }
-#welcome-image img {
+.welcome-image > img {
+  float: right;
   min-width:100%;
   min-height: 100vh;
 }
