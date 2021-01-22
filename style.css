@@ -21,15 +21,21 @@ body {
 }
 #top-bar {
 height: 90px;
-z-index:99;
 }
-.top-opaque {
-  background: linear-gradient(rgba(224, 71, 24, 0.7), rgba(0, 0, 0, 0));
+#logo-container {
+height: 80px;
+width:min-content;
 }
-#logo {
+#logo-container > a {
+height: 80px;
+    width: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#logo{
   float: left;
   height: 8vw;
-  z-index:99;
 }
 main {
   position: fixed;
@@ -39,6 +45,7 @@ main {
   bottom: 0;
   overflow-x: hidden;
   overflow-y:auto;
+  z-index: -1
 }
 h1 {
   font-size: 3em;
@@ -112,6 +119,7 @@ a {
   min-height: 100vh;
 }
 #project-container {
+  margin-top: 15px;
   margin-bottom: 12vh;
   height: 50vh;
   display: flex;
