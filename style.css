@@ -99,18 +99,23 @@ body {
     backface-visibility: hidden;
     border-radius: 0px;
     }
-.tester:before {
-    inset: auto auto calc(-11px) -1px;
-    border-left: 19px solid transparent;
-    border-right: 19px solid transparent;
-    border-top: 10px solid rgb(0, 0, 0);
-}
-.tester:after, .tester::before {
+
+.tester::after, .tester::before {
     position: absolute;
     content: "";
     z-index: 1;
     transition: all 0.1s linear 0s;
     backface-visibility: hidden;
+    
+}
+.tester::before {
+    left:-1px;
+    bottom:calc((2px + 8px) * -1);
+    top:auto;
+    right:auto;
+    border-left: 19px solid transparent;
+    border-right: 19px solid transparent;
+    border-top: 10px solid rgb(0, 0, 0);
 }
 .tester::after {
     top: -1px;
@@ -261,10 +266,14 @@ select:focus + .focus {
   .specialSkills {
     flex-direction: column;
   }
+  
   .specialSkills > .tester {
     margin: 0 auto;
     width: fit-content;
   }
+  .tester::before {
+    inset: auto auto calc(-11px) 0px !important;
+  } 
   .SS-list {
     margin-top: 32px;
     margin-bottom: 32px;
