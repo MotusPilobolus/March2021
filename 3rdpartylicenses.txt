@@ -60,6 +60,9 @@ THE SOFTWARE.
 @angular/platform-browser
 MIT
 
+@angular/router
+MIT
+
 bulma
 MIT
 The MIT License (MIT)
